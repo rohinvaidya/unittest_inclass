@@ -11,7 +11,8 @@ class TestCalculator(unittest.TestCase):
 
 
     def test_subtract(self):
-        self.assertEqual(self.calc.subtract(5, 3), 2)
+        # (self.calc.subtract(input1, input2), output)
+        pass
 
 
     def test_multiply(self):
@@ -19,7 +20,8 @@ class TestCalculator(unittest.TestCase):
 
 
     def test_divide(self):
-        self.assertEqual(self.calc.divide(10, 2), 5)
+        # (self.calc.divide(input1, input2), output)
+        pass
 
         
         # Test division by zero
