@@ -5,7 +5,6 @@ from library import Book, Member, Library
 
 class TestLibrarySystem(unittest.TestCase):
 
-
     # tests adding new and existing books, verifying that copies increment correctly
     def test_add_book(self):
         library = Library()
@@ -38,6 +37,12 @@ class TestLibrarySystem(unittest.TestCase):
         result = library.borrow_book(1, "Book A")
         self.assertFalse(result)
 
+    def test_return_book(self):
+        library = Library()
+        library.add_book("Book A", "Author A", 0)
+        library.add_member(1, "John Doe")
+        result = library.return_book(1, "Book A")
+        self.assertTrue(result)
 
 if __name__ == "__main__":
     unittest.main()
