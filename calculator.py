@@ -3,7 +3,8 @@ class Calculator:
         return a + b
 
     def subtract(self, a, b):
-        return a - b
+        if a is not None and b is not None:
+            return a - b
 
     def multiply(self, a, b):
         return a * b

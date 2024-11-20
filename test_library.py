@@ -44,6 +44,17 @@ class TestLibrarySystem(unittest.TestCase):
         result = library.return_book(1, "Book A")
         self.assertTrue(result)
 
+    def test_return_book_failure(self):
+        library = Library()
+        result = library.return_book(1, "Book A")
+        self.assertFalse(result)
+
+    def test_add_member_failure(self):
+        library = Library()
+        library.add_member(1, "John Doe")
+        self.assertIn(1, library.members)
+        self.assertNotIn(3, library.members)
+
 if __name__ == "__main__":
     unittest.main()
 

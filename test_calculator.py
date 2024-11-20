@@ -19,11 +19,17 @@ class TestCalculator(unittest.TestCase):
 
 
     def test_divide(self):
-        self.assertEqual(self.calc.divide(6, 2), 3)
+        # self.assertEqual(self.calc.divide(6, 2), 3)
 
         # Test division by zero
         with self.assertRaises(ValueError):
             self.calc.divide(10, 0)
+
+    def test_divide_not_zero(self):
+        self.assertEqual(self.calc.divide(6, 2), 3)
+
+    def test_subtract_none(self):
+        (self.calc.subtract(None, 2), None)
 
 if __name__ == "__main__":
     unittest.main()
